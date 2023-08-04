@@ -10,6 +10,12 @@
   --hue: 240;
   --primary-color: hsl(var(--hue), 6%, 21%);
   --second-color: hsl(var(--hue), 9%, 89%);
+
+  /*Theme Color Button */
+  --color-forest: hsl(120, 90%, 39%);
+  --color-rain: hsl(240, 94%, 70%);
+  --color-cafe: hsl(0, 81%, 55%);
+  --color-fireplace: hsl(24, 84%, 57%);
 }
 
 body {
@@ -87,4 +93,29 @@ button {
   background-color: var(--second-color);
 
   border-radius: 20%;
+
+  transition: transform 0.3s, background-color 0.5s;
+}
+
+#theme button:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo para o primeiro filho */
+#theme button.toggleColor:nth-child(1) {
+  background-color: var(--color-forest);
+}
+
+/* Estilo para o segundo filho */
+#theme button.toggleColor:nth-child(2) {
+  background-color: var(--color-rain);
+}
+
+/* Estilo para os filhos a partir do terceiro */
+#theme button.toggleColor:nth-child(3) {
+  background-color: var(--color-cafe);
+}
+
+#theme button.toggleColor:nth-child(4) {
+  background-color: var(--color-fireplace);
 }
