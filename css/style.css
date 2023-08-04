@@ -10,6 +10,10 @@
 
 body {
   font-size: 1.6rem;
+
+  display: grid;
+  height: 100vh;
+  place-content: center;
 }
 
 .flex {
@@ -26,4 +30,10 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
 }
