@@ -8,7 +8,8 @@
   font-size: 62.5%;
 
   --hue: 240;
-  --ff-color: hsl(var(--hue), 6%, 21%);
+  --primary-color: hsl(var(--hue), 6%, 21%);
+  --second-color: hsl(var(--hue), 9%, 89%);
 }
 
 body {
@@ -39,20 +40,51 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
+  gap: 19rem;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: var(--primary-color);
+
+  cursor: pointer;
+
+  font-size: 6.4rem;
 }
 
 /* Clock */
 #clock {
   flex-direction: column;
+  justify-content: center;
 }
 
 #timer {
   font-family: "Roboto", sans-serif;
-  color: var(--ff-color);
+  color: var(--primary-color);
   text-align: center;
 
   font-size: 13rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+
+#controls {
+  justify-content: space-between;
+}
+
+#theme {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+#theme button {
+  width: 14rem;
+  height: 15rem;
+
+  background-color: var(--second-color);
+
+  border-radius: 20%;
 }
