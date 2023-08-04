@@ -37,3 +37,19 @@ body {
   grid-template-columns: 1fr 1fr;
   justify-items: center;
 }
+
+/* Clock */
+#clock {
+  flex-direction: column;
+}
+
+#timer {
+  font-family: "Roboto", sans-serif;
+  color: ;
+  text-align: center;
+
+  font-size: 13rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
