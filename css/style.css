@@ -6,6 +6,9 @@
 
 :root {
   font-size: 62.5%;
+
+  --hue: 240;
+  --ff-color: hsl(var(--hue), 6%, 21%);
 }
 
 body {
@@ -45,7 +48,7 @@ body {
 
 #timer {
   font-family: "Roboto", sans-serif;
-  color: ;
+  color: var(--ff-color);
   text-align: center;
 
   font-size: 13rem;
