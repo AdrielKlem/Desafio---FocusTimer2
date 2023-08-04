@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Focus Timer 2</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
   <body>
     <div id="app">
-      <section id="clock">
+      <section id="clock" class="flex">
         <div id="timer">
           <span id="minutes">25</span>
           <span>:</span>
           <span id="seconds">00</span>
         </div>
-        <div id="controls">
-          <button>
+        <div id="controls" class="flex">
+          <button class="ph ph-play-circle">
             <span class="sr-only">Acionar o contador</span>
           </button>
           <button>
@@ -33,7 +34,7 @@
           </button>
         </div>
       </section>
-      <section id="theme">
+      <section id="theme" class="flex">
         <button>
           <span id="florest">Tema de Floresta</span>
         </button>
