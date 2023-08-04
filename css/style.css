@@ -10,6 +10,7 @@
   --hue: 240;
   --primary-color: hsl(var(--hue), 6%, 21%);
   --second-color: hsl(var(--hue), 9%, 89%);
+  --color-click: hsl(187, 100%, 42%);
 
   /*Theme Color Button */
   --color-forest: hsl(120, 90%, 39%);
@@ -80,6 +81,22 @@ button {
   justify-content: space-between;
 }
 
+#controls button {
+  transition: color 0.1s, transform 0.1s;
+}
+
+#controls button:active {
+  transform: scale(0.8);
+}
+
+#controls button.toggleControl {
+  color: var(--color-click);
+}
+
+#controls button.adjustTimer:hover {
+  color: var(--color-click);
+}
+
 #theme {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -101,21 +118,18 @@ button {
   transform: scale(1.1);
 }
 
-/* Estilo para o primeiro filho */
-#theme button.toggleColor:nth-child(1) {
+#theme button.toggleTheme:nth-child(1) {
   background-color: var(--color-forest);
 }
 
-/* Estilo para o segundo filho */
-#theme button.toggleColor:nth-child(2) {
+#theme button.toggleTheme:nth-child(2) {
   background-color: var(--color-rain);
 }
 
-/* Estilo para os filhos a partir do terceiro */
-#theme button.toggleColor:nth-child(3) {
+#theme button.toggleTheme:nth-child(3) {
   background-color: var(--color-cafe);
 }
 
-#theme button.toggleColor:nth-child(4) {
+#theme button.toggleTheme:nth-child(4) {
   background-color: var(--color-fireplace);
 }
