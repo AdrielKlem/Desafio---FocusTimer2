@@ -23,18 +23,24 @@
           <span id="seconds">00</span>
         </div>
         <div id="controls" class="flex">
-          <button class="ph ph-play-circle">
+          <button data-action="toggleRunning" class="ph ph-play-circle">
             <span class="sr-only">Acionar o contador</span>
           </button>
-          <button class="ph ph-stop-circle toggleControl">
+          <button data-action="reset" class="ph ph-stop-circle toggleControl">
             <span class="sr-only">Pausar o contador</span>
           </button>
-          <button class="ph ph-plus-circle adjustTimer">
+          <button
+            data-action="increaseMin"
+            class="ph ph-plus-circle adjustTimer"
+          >
             <span class="sr-only"
               >Aumenta em mais 5 minutos o tempo do timer</span
             >
           </button>
-          <button class="ph ph-minus-circle adjustTimer">
+          <button
+            data-action="decreaseMin"
+            class="ph ph-minus-circle adjustTimer"
+          >
             <span class="sr-only"
               >Diminuir em mais 5 minutos o tempo do timer</span
             >
