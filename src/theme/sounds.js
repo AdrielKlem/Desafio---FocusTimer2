@@ -1,5 +1,5 @@
 export const sounds = {
-    forest: new Audio('./assets/Floresta.mp3'),
+    forest: new Audio('./assets/Floresta.wav'),
     rain: new Audio('./assets/Chuva.wav'),
     cafe: new Audio('./assets/Cafeteria.wav'),
     fireplace: new Audio('./assets/Lareira.wav')
