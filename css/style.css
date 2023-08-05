@@ -17,11 +17,17 @@
   --color-forest: hsl(120, 90%, 39%);
   --color-forest-dark: hsl(120, 90%, 15%);
   --color-rain: hsl(240, 94%, 70%);
+  --color-rain-dark: hsl(240, 94%, 25%);
   --color-cafe: hsl(0, 81%, 55%);
+  --color-cafe-dark: hsl(0, 81%, 20%);
   --color-fireplace: hsl(24, 84%, 57%);
+  --color-fireplace-dark: hsl(24, 84%, 25%);
 }
 
-.forest:root {
+.forest:root,
+.rain:root,
+.cafe:root,
+.fireplace:root {
   --hue: 0;
   --primary-color: hsl(0, 0%, 100%);
   --second-color: hsl(0, 0%, 50%);
@@ -154,13 +160,13 @@ button {
 }
 
 .rain {
-  background-color: var(--color-forest-dark);
+  background-color: var(--color-rain-dark);
 }
 
 .cafe {
-  background-color: var(--color-forest-dark);
+  background-color: var(--color-cafe-dark);
 }
 
 .fireplace {
-  background-color: var(--color-forest-dark);
+  background-color: var(--color-fireplace-dark);
 }
