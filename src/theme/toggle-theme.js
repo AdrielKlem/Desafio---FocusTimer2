@@ -1,29 +1,56 @@
 import { forest, rain, cafe, fireplace } from './elements-theme.js'
 
-let exportResult = ''
-
 function removeAll(equal) {
-    if(equal = forest.classList.remove('toggleTheme')){
-
-    }
+    forest.classList.remove('toggleTheme')
     cafe.classList.remove('toggleTheme')
     rain.classList.remove('toggleTheme')
     fireplace.classList.remove('toggleTheme')
 }
 
 forest.addEventListener('click', (e) => {
-    removeAll()
-    forest.classList.toggle('toggleTheme')
+    let isThere = forest.classList.toggle('toggleTheme')
+  
+    if (isThere) {
+        removeAll()
+        forest.classList.toggle('toggleTheme')
+        return
+    } else {
+        removeAll()
+    }
 })
 
 rain.addEventListener('click', (e) => {
-    rain.classList.toggle('toggleTheme')
+    let isThere = rain.classList.toggle('toggleTheme')
+
+    if (isThere) {
+        removeAll()
+        rain.classList.toggle('toggleTheme')
+        return
+    } else {
+        removeAll()
+    }
 })
 
 cafe.addEventListener('click', (e) => {
-    cafe.classList.toggle('toggleTheme')
+    let isThere = cafe.classList.toggle('toggleTheme')
+
+    if (isThere) {
+        removeAll()
+        cafe.classList.toggle('toggleTheme')
+        return
+    } else {
+        removeAll()
+    }
 })
 
 fireplace.addEventListener('click', (e) => {
-    fireplace.classList.toggle('toggleTheme')
+    let isThere = fireplace.classList.toggle('toggleTheme')
+
+    if (isThere) {
+        removeAll()
+        fireplace.classList.toggle('toggleTheme')
+        return
+    } else {
+        removeAll()
+    }
 })
