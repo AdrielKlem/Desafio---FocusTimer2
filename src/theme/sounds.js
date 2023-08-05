@@ -1,7 +1,3 @@
-/* export const bgForest = new Audio('./assets/Floresta.wav')
-
-bgForest.loop = true
-*/
 export const sounds = {
     forest: new Audio('./assets/Floresta.mp3'),
     rain: new Audio('./assets/Chuva.wav'),
