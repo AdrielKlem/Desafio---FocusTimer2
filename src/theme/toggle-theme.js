@@ -1,56 +1,26 @@
 import { forest, rain, cafe, fireplace } from './elements-theme.js'
-
-function removeAll(equal) {
-    forest.classList.remove('toggleTheme')
-    cafe.classList.remove('toggleTheme')
-    rain.classList.remove('toggleTheme')
-    fireplace.classList.remove('toggleTheme')
-}
+import Theme from './manipulationTheme.js'
 
 forest.addEventListener('click', (e) => {
     let isThere = forest.classList.toggle('toggleTheme')
   
-    if (isThere) {
-        removeAll()
-        forest.classList.toggle('toggleTheme')
-        return
-    } else {
-        removeAll()
-    }
+    Theme(isThere, forest)
 })
 
 rain.addEventListener('click', (e) => {
     let isThere = rain.classList.toggle('toggleTheme')
 
-    if (isThere) {
-        removeAll()
-        rain.classList.toggle('toggleTheme')
-        return
-    } else {
-        removeAll()
-    }
+    Theme(isThere, rain)
 })
 
 cafe.addEventListener('click', (e) => {
     let isThere = cafe.classList.toggle('toggleTheme')
 
-    if (isThere) {
-        removeAll()
-        cafe.classList.toggle('toggleTheme')
-        return
-    } else {
-        removeAll()
-    }
+    Theme(isThere, cafe)
 })
 
 fireplace.addEventListener('click', (e) => {
     let isThere = fireplace.classList.toggle('toggleTheme')
 
-    if (isThere) {
-        removeAll()
-        fireplace.classList.toggle('toggleTheme')
-        return
-    } else {
-        removeAll()
-    }
+    Theme(isThere, fireplace)
 })
