@@ -13,7 +13,7 @@ export function countdown() {
     seconds--
 
     if(seconds < 0) {
-        seconds=10
+        seconds=59
         minutes--
     }
 

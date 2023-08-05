@@ -1,22 +1,23 @@
-import state from "./state";
+import state from "./state.js";
 import * as el from "./elements.js"
 import * as timer from './timer.js'
 
 export function toggleRunning() {
-    state.isRunning = el.playBtn.classList.toggle("toggleControls")
-    el.pauseBtn.classList.remove("toggleControls")
+    state.isRunning = el.playBtn.classList.toggle("toggleControl")
+    el.pauseBtn.classList.remove("toggleControl")
 
     if(state.isRunning) {
         timer.countdown()
         return
     } else {
-        reset()
+        state.isRunning = false
     }
 }
 
 
 export function reset() {
     state.isRunning = false
-    el.pauseBtn.classList.add("toggleControls")
-    el.playBtn.classList.remove("toggleControls")
+    el.pauseBtn.classList.add("toggleControl")
+    el.playBtn.classList.remove("toggleControl")
+    timer.updateDisplay()
 }
