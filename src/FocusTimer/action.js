@@ -21,3 +21,11 @@ export function reset() {
     el.playBtn.classList.remove("toggleControl")
     timer.updateDisplay()
 }
+
+export function increaseMin() {
+
+}
+
+export function decreaseMin() {
+
+}
