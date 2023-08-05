@@ -23,9 +23,19 @@ export function reset() {
 }
 
 export function increaseMin() {
-
+    if (!state.isRunning) {
+       let minutes = Number(el.minutes.textContent)
+       timer.updateDisplay(minutes+5)
+    } else {
+        alert('pausa')
+    }
 }
 
 export function decreaseMin() {
-
+    if (!state.isRunning) {
+        let minutes = Number(el.minutes.textContent)
+        timer.updateDisplay(minutes-5)
+    } else {
+        alert('pausa')
+    }
 }
