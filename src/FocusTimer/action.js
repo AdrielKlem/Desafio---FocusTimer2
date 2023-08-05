@@ -14,7 +14,6 @@ export function toggleRunning() {
     }
 }
 
-
 export function reset() {
     state.isRunning = false
     el.pauseBtn.classList.add("toggleControl")
