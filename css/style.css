@@ -5,19 +5,27 @@
 }
 
 :root {
-  font-size: 62.5%;
+  --hue: 280;
 
-  --hue: 240;
-  --color-white: #fff;
-  --primary-color: hsl(var(--hue), 6%, 21%);
-  --second-color: hsl(var(--hue), 9%, 89%);
-  --color-click: hsl(187, 100%, 42%);
+  --bg-color: hsl(var(--hue), 9%, 80%);
+  --text-color: hsl(var(--hue), 5%, 7%);
+
+  --action-color: hsl(var(--hue), 76%, 60%);
+  --bg-btn: hsl(var(--hue), 9%, 89%);
 
   /*Theme Color Button */
   --color-forest: hsl(120, 90%, 39%);
   --color-rain: hsl(240, 94%, 70%);
   --color-cafe: hsl(0, 81%, 55%);
   --color-fireplace: hsl(24, 84%, 57%);
+
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+html.dark:root {
+  --bg-color: hsl(var(--hue), 5%, 7%);
+  --text-color: hsl(var(--hue), 9%, 80%);
+  --bg-btn: hsl(var(--hue), 6%, 17%);
 }
 
 body {
@@ -26,6 +34,9 @@ body {
   display: grid;
   height: 100vh;
   place-content: center;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .flex {
@@ -54,11 +65,28 @@ body {
 button {
   background-color: transparent;
   border: none;
-  color: var(--primary-color);
+  color: var(--text-color);
 
   cursor: pointer;
 
   font-size: 6.4rem;
+}
+
+/* Toggle-Mode */
+#toggle-mode {
+  position: absolute;
+  top: 3.2rem;
+  right: 3.2rem;
+  font-size: 6rem;
+  list-style: 0;
+
+  color: var(--text-color);
+}
+
+html.dark .ph-sun,
+html:not(.dark) .ph-moon {
+  display: none;
+  visibility: hidden;
 }
 
 /* Clock */
@@ -69,7 +97,7 @@ button {
 
 #timer {
   font-family: "Roboto", sans-serif;
-  color: var(--primary-color);
+  color: var(--text-color);
   text-align: center;
 
   font-size: 13rem;
@@ -91,13 +119,14 @@ button {
 }
 
 #controls button.toggleControl {
-  color: var(--color-click);
+  color: var(--action-color);
 }
 
 #controls button.adjustTimer:hover {
-  color: var(--color-click);
+  color: var(--action-color);
 }
 
+/* Theme */
 #theme {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -108,7 +137,7 @@ button {
   width: 14rem;
   height: 15rem;
 
-  background-color: var(--second-color);
+  background-color: var(--bg-btn);
 
   border-radius: 20%;
 
