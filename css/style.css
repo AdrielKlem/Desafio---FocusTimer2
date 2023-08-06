@@ -13,6 +13,8 @@
   --action-color: hsl(var(--hue), 76%, 60%);
   --bg-btn: hsl(var(--hue), 9%, 89%);
 
+  --color-volume: hsl(var(--hue), 6%, 21%);
+
   /*Theme Color Button */
   --color-forest: hsl(120, 90%, 39%);
   --color-rain: hsl(240, 94%, 70%);
@@ -26,6 +28,7 @@ html.dark:root {
   --bg-color: hsl(var(--hue), 5%, 7%);
   --text-color: hsl(var(--hue), 9%, 80%);
   --bg-btn: hsl(var(--hue), 6%, 17%);
+  --color-volume: hsl(var(--hue), 9%, 80%);
 }
 
 body {
@@ -147,12 +150,14 @@ html:not(.dark) .ph-moon {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+
+  background-color: var(--bg-btn);
 }
 
 .volume::-webkit-slider-runnable-track {
-  background: #323238;
-  height: 5px;
-  border-radius: 5px;
+  background: var(--color-volume);
+  height: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .volume::-webkit-slider-thumb {
@@ -160,7 +165,7 @@ html:not(.dark) .ph-moon {
   width: 1.8rem;
   height: 1.8rem;
   border-radius: 50%;
-  background: #323238;
+  background: var(--color-volume);
   cursor: pointer;
 
   margin-top: -7px;
