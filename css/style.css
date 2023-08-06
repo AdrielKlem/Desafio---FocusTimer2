@@ -133,6 +133,39 @@ html:not(.dark) .ph-moon {
   gap: 3.2rem;
 }
 
+.theme-wrapper {
+  position: relative;
+}
+
+.volume {
+  position: absolute;
+  width: 10rem;
+  height: 0.5rem;
+  left: 2.4rem;
+  bottom: 1.5rem;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.volume::-webkit-slider-runnable-track {
+  background: #323238;
+  height: 5px;
+  border-radius: 5px;
+}
+
+.volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background: #323238;
+  cursor: pointer;
+
+  margin-top: -7px;
+}
+
 #theme button {
   width: 14rem;
   height: 15rem;
@@ -148,18 +181,18 @@ html:not(.dark) .ph-moon {
   transform: scale(1.1);
 }
 
-#theme button.toggleTheme:nth-child(1) {
+#theme .theme-wrapper:nth-child(1) button.toggleTheme {
   background-color: var(--color-forest);
 }
 
-#theme button.toggleTheme:nth-child(2) {
+#theme .theme-wrapper:nth-child(2) button.toggleTheme {
   background-color: var(--color-rain);
 }
 
-#theme button.toggleTheme:nth-child(3) {
+#theme .theme-wrapper:nth-child(3) button.toggleTheme {
   background-color: var(--color-cafe);
 }
 
-#theme button.toggleTheme:nth-child(4) {
+#theme .theme-wrapper:nth-child(4) button.toggleTheme {
   background-color: var(--color-fireplace);
 }

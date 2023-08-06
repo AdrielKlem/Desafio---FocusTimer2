@@ -63,18 +63,66 @@
         </div>
       </section>
       <section id="theme" class="flex">
-        <button id="forest" class="ph ph-tree">
-          <span class="sr-only">Tema de Floresta</span>
-        </button>
-        <button id="rain" class="ph ph-cloud-rain">
-          <span class="sr-only">Tema de Chuva</span>
-        </button>
-        <button id="cafe" class="ph ph-storefront">
-          <span class="sr-only">Tema de Cafeitaria</span>
-        </button>
-        <button id="fireplace" class="ph ph-flame">
-          <span class="sr-only">Tema de Laleira</span>
-        </button>
+        <div class="theme-wrapper">
+          <button id="forest" class="ph ph-tree">
+            <span class="sr-only">Tema de Floresta</span>
+          </button>
+          <input
+            class="volume"
+            type="range"
+            id="weight"
+            min="0"
+            value="0"
+            max="1"
+            step="0.1"
+            onchange="document.getElementById('demo').volume=this.value"
+          />
+        </div>
+        <div class="theme-wrapper">
+          <button id="rain" class="ph ph-cloud-rain">
+            <span class="sr-only">Tema de Chuva</span>
+          </button>
+          <input
+            class="volume"
+            type="range"
+            id="weight"
+            min="0"
+            value="0"
+            max="1"
+            step="0.1"
+            onchange="document.getElementById('demo').volume=this.value"
+          />
+        </div>
+        <div class="theme-wrapper">
+          <button id="cafe" class="ph ph-storefront">
+            <span class="sr-only">Tema de Cafeitaria</span>
+          </button>
+          <input
+            class="volume"
+            type="range"
+            id="weight"
+            min="0"
+            value="0"
+            max="1"
+            step="0.1"
+            onchange="document.getElementById('demo').volume=this.value"
+          />
+        </div>
+        <div class="theme-wrapper">
+          <button id="fireplace" class="ph ph-flame">
+            <span class="sr-only">Tema de Laleira</span>
+          </button>
+          <input
+            class="volume"
+            type="range"
+            id="weight"
+            min="0"
+            value="0"
+            max="1"
+            step="0.1"
+            onchange="document.getElementById('demo').volume=this.value"
+          />
+        </div>
       </section>
     </div>
   </body>
