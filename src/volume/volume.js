@@ -3,8 +3,6 @@ import { changeVolume } from "./changeVolume.js";
 
 const btnVolumeList = document.querySelectorAll(".volume");
 
-//.volume=this.value
-
 btnVolumeList.forEach(Volume => Volume.addEventListener("click", event => {
   const valores = capturarValor(event)
 
