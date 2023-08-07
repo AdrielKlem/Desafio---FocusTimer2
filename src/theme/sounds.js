@@ -20,7 +20,7 @@ export function pauseAudio(key) {
   }
 }
 
-function pauseAllAudios(key) {
+function pauseAllAudios() {
    for (let key in sounds) {
       sounds[key].pause();
   }

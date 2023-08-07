@@ -1,18 +1,14 @@
+import { capturarValor } from "./catchValue.js"
+import changeVolume from "./changeVolume.js";
+
 const btnVolumeList = document.querySelectorAll(".volume");
 
 //.volume=this.value
 
-console.log("opa")
+btnVolumeList.forEach(Volume => Volume.addEventListener("click", event => {
+  const valores = capturarValor(event)
 
-// btnVolumeList.forEach(Volume => {
-//     Volume.addEventListener("click", console.log("huumm"))
-// })
-    
+  changeVolume(valores.id, valores.valor)
 
-
-
-/*
-for(let i of btnVolumeList) {
-    console.log(i)
-}
-*/
+  console.log(`O ID ${typeof valores.id} de Valor ${valores.valor}`)
+}))
