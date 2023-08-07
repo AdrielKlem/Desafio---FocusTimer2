@@ -1,5 +1,5 @@
 import { capturarValor } from "./catchValue.js"
-import changeVolume from "./changeVolume.js";
+import { changeVolume } from "./changeVolume.js";
 
 const btnVolumeList = document.querySelectorAll(".volume");
 

@@ -1,8 +1,10 @@
 import * as Audio from "../theme/sounds.js"
 
-export default function changeVolume(key, volume) {
+export function changeVolume(key, volume) {
+console.log(key)
+console.log(Audio.sounds[key])
+
     if (Audio.sounds[key]!=Audio.sounds[key].paused) {
-        console.log(`o ${Audio.sounds[key]} tem o volume ${Audio.sounds[key].volume} e receberá ${volume, typeof volume} ${Audio.sounds[key].volume = volume}`)
         Audio.sounds[key].volume = volume
     } else {
         return
